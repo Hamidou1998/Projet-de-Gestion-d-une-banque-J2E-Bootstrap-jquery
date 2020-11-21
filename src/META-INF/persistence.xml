@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence-unit name="NotreBanque" transaction-type="RESOURCE_LOCAL">
+        <class>com.banque.entities.Client</class>
+		<class>com.banque.entities.Compte</class>
+	   <class>com.banque.entities.CompteCourant</class>
+ 		<class>com.banque.entities.CompteEpargne</class>
+		<class>com.banque.entities.Operation</class> 
+		<class>com.banque.entities.Retrait</class>
+		<class>com.banque.entities.Virement</class>
+		<shared-cache-mode>NONE</shared-cache-mode>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/Banque"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.schema-generation.database.action" value="drop_and_create"/>
+		</properties>
+	</persistence-unit>
+</persistence>
